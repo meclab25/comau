@@ -1,6 +1,7 @@
 clear; close all; clc;
 Ts = 1e-3;
 time = 0:Ts:5;
+%% Forward Kinematics
 q0 = [0, 0, -pi].';
 cm = ComauClass(q0);
 cm = cm.FKTraj(time, [pi, 0, -pi/2.].', 'pp7');

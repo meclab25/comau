@@ -39,16 +39,16 @@ classdef ComauClass < handle
         w   double; % end-effector angular velocity
         Dw  double; % end-effector angular acceleration
     end
-    %% CONSTANT PROPERTIES
-    properties (Constant = true)
+    %% CONSTANT HIDDEN PROPERTIES
+    properties (Constant = true, Hidden = true)
         L1 = 350e-3;
         L2 = 830e-3;
         L3 = 1160e-3;
         L4 = 2269.18e-3;
         % L4 = 1492.18e-3;
         L5 = 250e-3;
-        pX = 2.40;
-        pY = 0.35;
+        pX = 2.40;      % for patch (EM8000 frame)
+        pY = 0.35;      % for patch (EM8000 frame)
     end
     %% HIDDEN PROPERTIES
     properties (Hidden = true)
