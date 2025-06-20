@@ -5,6 +5,9 @@ time = 0:Ts:5;
 q0 = [0, 0, -pi].';
 cm = ComauClass(q0);
 cm = cm.FKTraj(time, [pi, 0, -pi/2.].', 'pp7');
+fig = figure(1);
+set(fig, "Color", [1,1,1]);
+set(fig.Children, "Color", [0.56,0.5,0])
 cm.Animate;
 for i = 1:5:5000
     cm.plotUpdate(i, 1)
